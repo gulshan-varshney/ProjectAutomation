@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.AddProductInWishListTest">
+      <class name="testScripts.LoginWithDifferentCredentials">
         <methods>
+          <include name="Inlogin" invocation-numbers="1"/>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
-          <include name="addProductToWishList"/>
           <include name="logoutSS"/>
           <include name="loginIntoSS"/>
         </methods>
-      </class> <!-- testScripts.AddProductInWishListTest -->
+      </class> <!-- testScripts.LoginWithDifferentCredentials -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
