@@ -1,13 +1,8 @@
 package pomPages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import genericLib.WorkLib;
 
 public class HomePage extends BaseClass {
@@ -49,7 +44,7 @@ public class HomePage extends BaseClass {
 	private WebElement cartIcon;
 	
 	//identify wishListIcon
-	@FindBy(xpath = "(//*[name()='svg' and @ name='addToWishlis'])[1]")
+	@FindBy(xpath = "(//*[name()='svg' and @ name='addToWishlist'])[1]")
 	private WebElement wishList;
 	
 	//identify wishList link in setting

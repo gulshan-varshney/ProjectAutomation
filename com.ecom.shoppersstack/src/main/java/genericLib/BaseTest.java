@@ -21,7 +21,7 @@ public class BaseTest implements IAutoConstant{
 	
 	public static  WebDriver driver;
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void launchBrowser() throws IOException {
 		
 		FLib lib = new FLib();
@@ -43,7 +43,7 @@ public class BaseTest implements IAutoConstant{
 		driver.get(url);
 	}
 	
-	@BeforeMethod
+	@BeforeMethod()
 	public void loginIntoSS() throws EncryptedDocumentException, IOException {
 		
 		WelcomePage wp = new WelcomePage(driver);
@@ -57,14 +57,14 @@ public class BaseTest implements IAutoConstant{
 		slp.ssLogin(username, password);
 	}
 	
-	@AfterMethod
+	@AfterMethod()
 	public void logoutSS() {
 		HomePage hp = new HomePage(driver);
 		hp.clickOnLogout();
 	}
 	
 	
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void closeBrowser() {
 		driver.quit();
 	}

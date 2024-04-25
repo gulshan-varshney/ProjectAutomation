@@ -37,6 +37,7 @@ public class ShopperLoginPage extends BaseClass {
 		emailTextfield.sendKeys(username);
 		passwordTextField.sendKeys(password);
 		loginButton.click();
+		emailTextfield.clear();
 	}
 
 }

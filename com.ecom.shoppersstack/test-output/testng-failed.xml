@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Test5(failed)">
+    <classes>
+      <class name="testScripts.BuyProductUsingCreditCard">
+        <methods>
+          <include name="buyProductWithCreditCard"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="logoutSS"/>
+          <include name="loginIntoSS"/>
+        </methods>
+      </class> <!-- testScripts.BuyProductUsingCreditCard -->
+    </classes>
+  </test> <!-- Test5(failed) -->
+  <test thread-count="5" parallel="tests" name="Test1(failed)">
     <classes>
       <class name="testScripts.AddProductInWishListTest">
         <methods>
@@ -13,5 +26,44 @@
         </methods>
       </class> <!-- testScripts.AddProductInWishListTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test1(failed) -->
+  <test thread-count="5" parallel="tests" name="Test3(failed)">
+    <classes>
+      <class name="testScripts.BuyProductUsingCodTest">
+        <methods>
+          <include name="buyProduct"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="logoutSS"/>
+          <include name="loginIntoSS"/>
+        </methods>
+      </class> <!-- testScripts.BuyProductUsingCodTest -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+  <test thread-count="5" parallel="tests" name="Test4(failed)">
+    <classes>
+      <class name="testScripts.addAndEditCartTest">
+        <methods>
+          <include name="addProductToCart"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="logoutSS"/>
+          <include name="loginIntoSS"/>
+        </methods>
+      </class> <!-- testScripts.addAndEditCartTest -->
+    </classes>
+  </test> <!-- Test4(failed) -->
+  <test thread-count="5" parallel="tests" name="Test2(failed)">
+    <classes>
+      <class name="testScripts.SearchProductTest">
+        <methods>
+          <include name="searchProduct"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="logoutSS"/>
+          <include name="loginIntoSS"/>
+        </methods>
+      </class> <!-- testScripts.SearchProductTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
