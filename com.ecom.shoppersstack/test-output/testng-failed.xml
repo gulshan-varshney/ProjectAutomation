@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.BuyProductUsingCreditCard">
+      <class name="testScripts.AddProductInWishListTest">
         <methods>
-          <include name="buyUsingCredit"/>
-          <include name="buyProductWithCreditCard"/>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
+          <include name="addProductToWishList"/>
           <include name="logoutSS"/>
           <include name="loginIntoSS"/>
         </methods>
-      </class> <!-- testScripts.BuyProductUsingCreditCard -->
+      </class> <!-- testScripts.AddProductInWishListTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

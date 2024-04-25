@@ -19,7 +19,7 @@ import pomPages.WelcomePage;
 
 public class BaseTest implements IAutoConstant{
 	
-	public WebDriver driver;
+	public static  WebDriver driver;
 	
 	@BeforeClass
 	public void launchBrowser() throws IOException {

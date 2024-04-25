@@ -49,7 +49,7 @@ public class HomePage extends BaseClass {
 	private WebElement cartIcon;
 	
 	//identify wishListIcon
-	@FindBy(xpath = "(//*[name()='svg' and @ name='addToWishlist'])[1]")
+	@FindBy(xpath = "(//*[name()='svg' and @ name='addToWishlis'])[1]")
 	private WebElement wishList;
 	
 	//identify wishList link in setting

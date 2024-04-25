@@ -15,6 +15,7 @@ public class BuyProductUsingCreditCard extends BaseTest{
 		HomePage hp = new HomePage(driver);
 		hp.addProductIntoCart();
 		hp.clickOnCartIcon();
+		
 		CartPage cp = new CartPage(driver);
 		cp.orderByCreditcard();
 	}

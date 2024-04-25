@@ -1,11 +1,15 @@
 package testScripts;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import genericLib.BaseTest;
+import genericLib.CustomListner;
 import genericLib.WorkLib;
 import pomPages.HomePage;
 
+
+@Listeners(CustomListner.class)
 public class AddProductInWishListTest extends BaseTest{
 	
 	@Test
