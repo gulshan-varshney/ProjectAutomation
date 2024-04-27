@@ -9,8 +9,10 @@ import pomPages.HomePage;
 public class BuyProductUsingCreditCard extends BaseTest{
 	
 	
-	@Test
+	@Test()
 	public void buyProductWithCreditCard() {
+		
+		//test = report.createTest(name.getName());
 		
 		HomePage hp = new HomePage(driver);
 		hp.addProductIntoCart();

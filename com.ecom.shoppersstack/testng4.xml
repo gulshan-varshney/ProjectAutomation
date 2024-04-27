@@ -4,10 +4,9 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="testScripts.AddProductInWishListTest"/>
-      <class name="testScripts.SearchProductTest"/>
       <class name="testScripts.BuyProductUsingCodTest"/>
-      <class name="testScripts.BuyProductUsingCreditCard"/>
       <class name="testScripts.addAndEditCartTest"/>
+      <class name="testScripts.BuyProductUsingCreditCard"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -8,11 +8,39 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">25,418</td><td></td><td></td></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">143,337</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.AddProductInWishListTest</td><td><a href="#m0">addProductToWishList</a></td><td rowspan="1">1714048900660</td><td rowspan="1">10430</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">testScripts.BuyProductUsingCodTest</td><td><a href="#m0">logoutSS</a></td><td rowspan="1">1714134637238</td><td rowspan="1">1170</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">testScripts.BuyProductUsingCodTest</td><td><a href="#m1">closeBrowser</a></td><td rowspan="1">1714134638413</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.AddProductInWishListTest</td><td><a href="#m2">addProductToWishList</a></td><td rowspan="1">1714134576219</td><td rowspan="1">10343</td></tr><tr class="passedodd"><td rowspan="1">testScripts.BuyProductUsingCodTest</td><td><a href="#m3">buyProduct</a></td><td rowspan="1">1714134625560</td><td rowspan="1">11677</td></tr><tr class="passedeven"><td rowspan="1">testScripts.BuyProductUsingCreditCard</td><td><a href="#m4">buyProductWithCreditCard</a></td><td rowspan="1">1714134658667</td><td rowspan="1">9835</td></tr><tr class="passedodd"><td rowspan="1">testScripts.SearchProductTest</td><td><a href="#m5">searchProduct</a></td><td rowspan="1">1714134597089</td><td rowspan="1">3744</td></tr><tr class="passedeven"><td rowspan="1">testScripts.addAndEditCartTest</td><td><a href="#m6">addProductToCart</a></td><td rowspan="1">1714134688290</td><td rowspan="1">8210</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testScripts.AddProductInWishListTest#addProductToWishList</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Test Started Successfully<br/>Test success</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">testScripts.BuyProductUsingCodTest#logoutSS</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;li class=&quot;MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters css-1km1ehz&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;...&lt;/li&gt; is not clickable at point (1404, 231). Other element would receive the click: &lt;li class=&quot;MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters css-1km1ehz&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;...&lt;/li&gt;
+  (Session info: chrome=124.0.6367.78)
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0843f30ebc9c5efd8fff946f31991edd, clickElement {id=f.27E4C3D8AB97B30A4AB909E1D8F2E507.d.D3F0D29CBB22CB1CA68411AE97090195.e.3129}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.78, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\gulsh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51585}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51585/devtoo..., se:cdpVersion: 124.0.6367.78, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (0843f30ebc9c5efd8fff946f31991edd)] -&gt; xpath: //li[text()=&apos;Logout&apos;]]
+Session ID: 0843f30ebc9c5efd8fff946f31991edd
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at pomPages.HomePage.clickOnLogout(HomePage.java:106)
+	at genericLib.BaseTest.logoutSS(BaseTest.java:67)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testScripts.BuyProductUsingCodTest#closeBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testScripts.AddProductInWishListTest#addProductToWishList</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Test Started Successfully<br/>Test success</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testScripts.BuyProductUsingCodTest#buyProduct</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Test Started Successfully<br/>Test success</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testScripts.BuyProductUsingCreditCard#buyProductWithCreditCard</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Test Started Successfully<br/>Test success</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testScripts.SearchProductTest#searchProduct</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Test Started Successfully<br/>Test success</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testScripts.addAndEditCartTest#addProductToCart</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Test Started Successfully<br/>Test success</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

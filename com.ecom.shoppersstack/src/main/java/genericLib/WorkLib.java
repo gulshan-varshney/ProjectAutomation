@@ -1,5 +1,7 @@
 package genericLib;
 
+import java.util.Date;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,4 +20,13 @@ public class WorkLib {
 		alert.accept();
 	
 	}
+		
+	public static String getName()
+	{
+		String date = new Date().toString().replace(" ", "_").replace(":", "_");
+		String name= "report"+date;
+		return date;
+	}
+	
+
 }

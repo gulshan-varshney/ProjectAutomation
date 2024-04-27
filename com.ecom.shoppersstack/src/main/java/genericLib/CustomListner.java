@@ -31,7 +31,7 @@ public class CustomListner implements ITestListener {
 		// TODO Auto-generated method stub
 		String methodName = result.getMethod().getMethodName();
 		String date = new Date().toString().replace(" ", "_").replace(":", "_");
-		TakesScreenshot ts = (TakesScreenshot) BaseTest.driver;
+		TakesScreenshot ts = (TakesScreenshot) BaseTest.sdriver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		File dest = new File("./Screensshot/"+date+""+ methodName + ".png");
 		

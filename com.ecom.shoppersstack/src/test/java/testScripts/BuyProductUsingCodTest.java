@@ -8,9 +8,9 @@ import pomPages.HomePage;
 
 public class BuyProductUsingCodTest extends BaseTest {
 
-	@Test
+	@Test()
 	public void buyProduct() {
-		
+		//test = report.createTest(name.getName());
 		HomePage hp = new HomePage(driver);
 		hp.addProductIntoCart();
 		hp.clickOnCartIcon();

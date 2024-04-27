@@ -12,16 +12,17 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-
 import pomPages.HomePage;
 import pomPages.ShopperLoginPage;
 import pomPages.WelcomePage;
 
 public class BaseTest implements IAutoConstant{
 	
-	public static  WebDriver driver;
+	public static  WebDriver sdriver;
+	public WebDriver driver;
+
 	
-	@BeforeClass(alwaysRun = true)
+	@BeforeClass()
 	public void launchBrowser() throws IOException {
 		
 		FLib lib = new FLib();
@@ -38,6 +39,7 @@ public class BaseTest implements IAutoConstant{
 		else {
 			Reporter.log("invalid Browser",true);
 		}
+		sdriver=driver;
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeSeconds));
 		driver.get(url);
@@ -46,6 +48,7 @@ public class BaseTest implements IAutoConstant{
 	@BeforeMethod()
 	public void loginIntoSS() throws EncryptedDocumentException, IOException {
 		
+	
 		WelcomePage wp = new WelcomePage(driver);
 		wp.clickOnLogin();
 		
@@ -55,18 +58,23 @@ public class BaseTest implements IAutoConstant{
 		
 		ShopperLoginPage slp= new ShopperLoginPage(driver);
 		slp.ssLogin(username, password);
+		
 	}
 	
 	@AfterMethod()
 	public void logoutSS() {
 		HomePage hp = new HomePage(driver);
 		hp.clickOnLogout();
+		
 	}
 	
 	
-	@AfterClass(alwaysRun = true)
+	@AfterClass()
 	public void closeBrowser() {
 		driver.quit();
 	}
+	
+	
+
 
 }

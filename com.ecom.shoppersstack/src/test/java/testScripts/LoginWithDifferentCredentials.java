@@ -8,9 +8,7 @@ import org.testng.annotations.Test;
 
 import genericLib.BaseTest;
 import genericLib.FLib;
-import pomPages.BaseClass;
 import pomPages.ShopperLoginPage;
-import pomPages.WelcomePage;
 
 public class LoginWithDifferentCredentials extends BaseTest {
 

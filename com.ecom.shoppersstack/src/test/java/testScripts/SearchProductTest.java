@@ -13,6 +13,7 @@ public class SearchProductTest extends BaseTest {
 	@Test(description = "verify user should able to search the product")
 	public void searchProduct() {
 		
+		//test = report.createTest(name.getName());
 		HomePage hp = new HomePage(driver);
 		hp.searchTheProduct("watch");
 		try {
