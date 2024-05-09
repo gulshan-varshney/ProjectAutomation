@@ -12,12 +12,12 @@ public class SearchProductTest extends BaseTest {
 
 	@Test(description = "verify user should able to search the product")
 	public void searchProduct() {
-		
-		//test = report.createTest(name.getName());
+
+		// test = report.createTest(name.getName());
 		HomePage hp = new HomePage(driver);
-		hp.searchTheProduct("watch");
+		hp.searchTheProduct("samsung");
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

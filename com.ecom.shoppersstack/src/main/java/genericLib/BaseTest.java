@@ -16,65 +16,57 @@ import pomPages.HomePage;
 import pomPages.ShopperLoginPage;
 import pomPages.WelcomePage;
 
-public class BaseTest implements IAutoConstant{
-	
-	public static  WebDriver sdriver;
+public class BaseTest implements IAutoConstant {
+
+	public static WebDriver sdriver;
 	public WebDriver driver;
 
-	
 	@BeforeClass()
 	public void launchBrowser() throws IOException {
-		
+
 		FLib lib = new FLib();
 		String browser = lib.getDataFromPropertyFile(prop_path, "browser");
 		String url = lib.getDataFromPropertyFile(prop_path, "url");
-		Reporter.log("----Launching "+browser+" browser----",true);
-		
+		Reporter.log("----Launching " + browser + " browser----", true);
+
 		if (browser.equals("chrome")) {
-			driver= new ChromeDriver();
-		}
-		else if (browser.equals("edge")) {
+			driver = new ChromeDriver();
+		} else if (browser.equals("edge")) {
 			driver = new EdgeDriver();
+		} else {
+			Reporter.log("invalid Browser", true);
 		}
-		else {
-			Reporter.log("invalid Browser",true);
-		}
-		sdriver=driver;
+		sdriver = driver;
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeSeconds));
 		driver.get(url);
 	}
-	
+
 	@BeforeMethod()
 	public void loginIntoSS() throws EncryptedDocumentException, IOException {
-		
-	
+
 		WelcomePage wp = new WelcomePage(driver);
 		wp.clickOnLogin();
-		
+
 		FLib lib = new FLib();
 		String username = lib.getDataFromExcelFile(excel_path, sheet_name, 1, 0);
 		String password = lib.getDataFromExcelFile(excel_path, sheet_name, 1, 1);
-		
-		ShopperLoginPage slp= new ShopperLoginPage(driver);
+
+		ShopperLoginPage slp = new ShopperLoginPage(driver);
 		slp.ssLogin(username, password);
-		
+
 	}
-	
+
 	@AfterMethod()
 	public void logoutSS() {
 		HomePage hp = new HomePage(driver);
 		hp.clickOnLogout();
-		
+
 	}
-	
-	
+
 	@AfterClass()
 	public void closeBrowser() {
 		driver.quit();
 	}
-	
-	
-
 
 }

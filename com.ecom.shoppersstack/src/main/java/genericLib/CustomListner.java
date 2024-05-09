@@ -33,8 +33,8 @@ public class CustomListner implements ITestListener {
 		String date = new Date().toString().replace(" ", "_").replace(":", "_");
 		TakesScreenshot ts = (TakesScreenshot) BaseTest.sdriver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File("./Screensshot/"+date+""+ methodName + ".png");
-		
+		File dest = new File("./Screensshot/" + date + "" + methodName + ".png");
+
 		try {
 			Files.copy(src, dest);
 		} catch (IOException e) {
