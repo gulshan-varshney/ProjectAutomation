@@ -9,7 +9,6 @@ public class WelcomePage extends BaseClass {
 	
 	public WelcomePage(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	//identify login button on welcome page

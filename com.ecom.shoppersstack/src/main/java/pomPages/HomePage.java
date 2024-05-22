@@ -9,7 +9,6 @@ public class HomePage extends BaseClass {
 
 	public HomePage(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	// identify user setting icon

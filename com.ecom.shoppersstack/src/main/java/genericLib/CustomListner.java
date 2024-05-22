@@ -38,8 +38,6 @@ public class CustomListner implements ITestListener {
 		try {
 			Files.copy(src, dest);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 
 	}

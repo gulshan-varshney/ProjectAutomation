@@ -5,7 +5,7 @@
     <classes>
       <class name="testScripts.LoginWithDifferentCredentials">
         <methods>
-          <include name="Inlogin" invocation-numbers="1"/>
+          <include name="Inlogin" invocation-numbers="0"/>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
           <include name="logoutSS"/>

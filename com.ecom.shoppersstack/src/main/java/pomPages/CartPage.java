@@ -130,8 +130,6 @@ public class CartPage extends BaseClass {
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		proceedAddressButton.click();
 		creditCard.click();
